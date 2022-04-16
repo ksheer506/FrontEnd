@@ -8,8 +8,8 @@ body {
   position: relative;
   left: 100px;
   top: 20px;
-  width: 40vw;
-  height: 50vh;
+  width: 50vw;
+  height: 60vh;
 }
 
 .carousel {
@@ -26,7 +26,8 @@ body {
   position: absolute;
   top: 50%;
   width: 5vw;
-  opacity: 5vw;
+  height: 5vw;
+  opacity: 0.9;
   border-radius: 100%;
   background-color: rgb(255, 255, 255);
   z-index: 3;
