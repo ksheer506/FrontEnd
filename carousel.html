@@ -1,93 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
-
+  
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="carousel.js" defer></script>
-  <style>
-    body {
-      margin: 0px;
-      background-color: rgb(236, 236, 236);
-    }
-
-    .carousel-box {
-      display: flex;
-      position: relative;
-      left: 40px;
-      top: 20px;
-      width: 80vw;
-      height: 60vh;
-    }
-
-    .carousel {
-      display: flex;
-      position: relative;
-      width: 100%;
-      flex-flow: row nowrap;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .manipulation {
-      display: flex;
-      position: absolute;
-      top: 50%;
-      width: 10vw;
-      height: 10vw;
-      opacity: 0.9;
-      border-radius: 100%;
-
-      background-color: rgb(255, 255, 255);
-      z-index: 3;
-    }
-
-    #previous {
-      left: 0%;
-      transform: translate(-50%, -50%);
-      box-shadow: 0px 0px 4px rgb(0, 0, 0);
-    }
-
-    #next {
-      right: 0%;
-      transform: translate(50%, -50%);
-      box-shadow: -1px 0px 4px rgb(0, 0, 0);
-    }
-
-    .items {
-      display: flex;
-      position: absolute;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      background-color: beige;
-      font-size: 3rem;
-      font-weight: bold;
-      right: -100%;
-    }
-
-    .items.main {
-      right: 0%;
-      transition: 0.4s all;
-      z-index: 2;
-    }
-
-    .items.left {
-      right: 100%;
-      transition: 0.4s all;
-      z-index: 0;
-    }
-
-    .items.right {
-      right: -100%;
-      transition: 0.4s all;
-      z-index: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="carousel.css">
   </link>
-  <title></title>
+  <title>Infinite Carousel</title>
 </head>
 
 <body>
