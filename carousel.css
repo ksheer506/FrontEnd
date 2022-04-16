@@ -6,9 +6,9 @@ body {
 .carousel-box {
   display: flex;
   position: relative;
-  left: 40px;
+  left: 100px;
   top: 20px;
-  width: 80vw;
+  width: 50vw;
   height: 60vh;
 }
 
