@@ -5,4 +5,4 @@
 2. carousel item 전환 애니메이션 시간 내에 화살표를 여러번 눌러 carousel이 넘어가게 될 경우 throttle을 이용해 애니메이션이 무너지는 것을 막음
 
 
-[Infinite Carousel](https://htmlpreview.github.io/?https://github.com/ksheer506/FrontEnd-tutorial/blob/main/Inifinte-Carousel/carousel.html)
+[Infinite Carousel](https://htmlpreview.github.io/?https://github.com/ksheer506/HTML-tutorial/blob/main/Inifinte-Carousel/carousel.html)
