@@ -1,0 +1,187 @@
+/* 공통 사항 */
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+}
+
+div > p {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* ---------------------------------------------------------- */
+/* 기본형 */
+.default > .switch {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 40px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 40px;
+  background-color: rgb(219, 219, 219);
+  transition: 0.6s all;
+}
+
+.default > .switch::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  content: "";
+  height: 40px;
+  width: 40px;
+  transform: translate(0%, -50%);
+  border-radius: 40px;
+  background-color: white;
+  transition: 0.6s all;
+  box-shadow: 0px 1px 3px grey;
+}
+
+#default {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+#default:checked + .switch::before {
+  left: 100%;
+  transform: translate(-100%, -50%);
+  transition: 0.6s all;
+}
+
+#default:checked + .switch {
+  background-color: rgba(34, 214, 34, 0.815);
+  transition: 0.6s all;
+}
+/* ---------------------------------------------------------- */
+/* 다크 모드 */
+.darkmode > .switch {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 40px;
+  border: 1px solid rgb(193, 225, 255);
+  border-radius: 40px;
+  background-color: rgb(193, 225, 255);
+  transition: 0.6s all;
+  overflow: hidden;
+}
+
+#moon {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  content: "";
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background: radial-gradient(rgba(255, 206, 100, 0.925), rgb(255, 252, 223));
+  background-color: rgba(255, 206, 100, 0.925);
+  box-shadow: 10px 0px 35px 15px rgb(255, 255, 255);
+  overflow: hidden;
+  transition: 0.6s all;
+}
+
+#moon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -100%;
+  transform: translate(0%, -50%);
+  content: "";
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 206, 100, 0.925);
+  border-radius: 40px;
+  opacity: 0.7;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  left: -100%;
+  transform: 3s all;
+}
+
+.stars > span {
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: rgb(255, 255, 209);
+  box-shadow: 0px 0px 13px 2px rgb(255, 255, 238);
+  border-radius: 2px;
+}
+
+#star1 {
+  left: 35%;
+  top: 70%;
+}
+
+#star2 {
+  left: 30%;
+  top: 20%;
+}
+
+#star3 {
+  left: 30%;
+  top: 50%;
+}
+
+#star4 {
+  left: 15%;
+  top: 50%;
+}
+
+#star5 {
+  left: 25%;
+  top: 80%;
+}
+
+#darkmode {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+#darkmode:checked + .switch #moon {
+  left: 100%;
+  background-color: rgba(255, 237, 79, 0.925);
+  background: radial-gradient(rgba(255, 244, 145, 0.925), rgb(201, 201, 201));
+  box-shadow: -2px 0px 35px 5px rgba(255, 236, 64, 0.644);
+  transform: translateX(-100%);
+  transition: 0.6s all;
+}
+
+#darkmode:checked + .switch #moon::before {
+  right: -45%;
+  background-color: black;
+  transition: 0.25s all;
+}
+
+#darkmode:checked + .switch {
+  border: 1px solid black;
+  background-color: rgb(0, 0, 0);
+  transition: 0.6s all;
+}
+
+#darkmode:checked + .switch > .stars {
+  left: 0%;
+  transition: 0.6s all;
+}
